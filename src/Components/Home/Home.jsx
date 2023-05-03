@@ -118,8 +118,147 @@ const Home = () => {
             </div>
 
             <div className="gap-5 lg:my-14 lg:px-40 px-3  lg:py-5">
-            <h2 className='text-center lg:text-4xl  font-bold py-3 mb-10 bg-blue-500 text-slate-100 rounded-xl'>Our Customer Reviews</h2>
-            
+                <h2 className='text-center lg:text-4xl   font-bold py-3 mb-10 mt-5 bg-blue-500 text-slate-100 rounded-xl'>Customer Reviews</h2>
+
+                <div className='grid lg:grid-cols-4 gap-5'>
+                    <div className="max-w-sm">
+                        <Card>
+
+                            <div className="flex flex-col items-center pb-10">
+                                <img
+                                    className="mb-3 h-24 w-24 rounded-full shadow-lg"
+                                    src="https://www.mouqy.com/wp-content/uploads/2023/02/henry-cavill-in-black-rectangular-glasses.jpg"
+                                    alt="Bonnie image"
+                                />
+                                <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
+                                    Clark Kent
+                                </h5>
+                                <span className="text-sm text-gray-500 dark:text-gray-400">
+                                    I recently tried the new ramen place that opened up in town, and I have to say, it was delicious! The broth was rich and flavorful, and the noodles were perfectly cooked. I ordered the spicy miso ramen and it had just the right amount of heat. The toppings were also really fresh and added a great texture to the dish. The only downside was that the restaurant was a bit small and crowded, but it was worth it for the food. Overall, I would definitely recommend giving this place a try if you're a ramen fan!
+                                </span>
+
+                                {
+
+                                    <Rating className='mt-2'>
+                                        <Rating.Star />
+                                        <Rating.Star />
+                                        <Rating.Star />
+                                        <Rating.Star />
+                                        <Rating.Star filled={false} />
+                                        <p className="ml-2 text-sm font-medium text-gray-500 dark:text-gray-400">
+                                            4.95 out of 5
+                                        </p>
+                                    </Rating>
+                                }
+
+
+                            </div>
+                        </Card>
+                    </div>
+                    <div className="max-w-sm">
+                        <Card>
+
+                            <div className="flex flex-col items-center pb-10">
+                                <img
+                                    className="mb-3 h-24 w-24 rounded-full shadow-lg"
+                                    src="https://www.looper.com/img/gallery/the-tony-stark-fan-theory-giving-mcu-fans-hope-for-his-return/intro-1615223035.jpg"
+                                    alt="Bonnie image"
+                                />
+                                <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
+                                    Tony Stark
+                                </h5>
+                                <span className="text-sm text-gray-500 dark:text-gray-400">
+                                    I recently tried the new ramen place that opened up in town, and I have to say, it was delicious! The broth was rich and flavorful, and the noodles were perfectly cooked. I ordered the spicy miso ramen and it had just the right amount of heat. The toppings were also really fresh and added a great texture to the dish. The only downside was that the restaurant was a bit small and crowded, but it was worth it for the food. Overall, I would definitely recommend giving this place a try if you're a ramen fan!
+                                </span>
+
+                                {
+
+                                    <Rating className='mt-2'>
+                                        <Rating.Star />
+                                        <Rating.Star />
+                                        <Rating.Star />
+                                        <Rating.Star />
+                                        <Rating.Star filled={false} />
+                                        <p className="ml-2 text-sm font-medium text-gray-500 dark:text-gray-400">
+                                            4.95 out of 5
+                                        </p>
+                                    </Rating>
+                                }
+
+
+                            </div>
+                        </Card>
+                    </div>
+                    <div className="max-w-sm">
+                        <Card>
+
+                            <div className="flex flex-col items-center pb-10">
+                                <img
+                                    className="mb-3 h-24 w-24 rounded-full shadow-lg"
+                                    src="https://hips.hearstapps.com/hmg-prod/images/thor-1658259662.jpeg"
+                                    alt="Bonnie image"
+                                />
+                                <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
+                                    Thor Odin Son
+                                </h5>
+                                <span className="text-sm text-gray-500 dark:text-gray-400">
+                                    I recently tried the new ramen place that opened up in town, and I have to say, it was delicious! The broth was rich and flavorful, and the noodles were perfectly cooked. I ordered the spicy miso ramen and it had just the right amount of heat. The toppings were also really fresh and added a great texture to the dish. The only downside was that the restaurant was a bit small and crowded, but it was worth it for the food. Overall, I would definitely recommend giving this place a try if you're a ramen fan!
+                                </span>
+
+                                {
+
+                                    <Rating className='mt-2'>
+                                        <Rating.Star />
+                                        <Rating.Star />
+                                        <Rating.Star />
+                                        <Rating.Star />
+                                        <Rating.Star filled={false} />
+                                        <p className="ml-2 text-sm font-medium text-gray-500 dark:text-gray-400">
+                                            4.95 out of 5
+                                        </p>
+                                    </Rating>
+                                }
+
+
+                            </div>
+                        </Card>
+                    </div>
+                    <div className="max-w-sm">
+                        <Card>
+
+                            <div className="flex flex-col items-center pb-10">
+                                <img
+                                    className="mb-3 h-24 w-24 rounded-full shadow-lg"
+                                    src="https://media.comicbook.com/2015/12/bruce-wayne-grin-bvs-161475-161717.jpg"
+                                    alt="Bonnie image"
+                                />
+                                <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
+                                    Bruce Wane
+                                </h5>
+                                <span className="text-sm text-gray-500 dark:text-gray-400">
+                                    I recently tried the new ramen place that opened up in town, and I have to say, it was delicious! The broth was rich and flavorful, and the noodles were perfectly cooked. I ordered the spicy miso ramen and it had just the right amount of heat. The toppings were also really fresh and added a great texture to the dish. The only downside was that the restaurant was a bit small and crowded, but it was worth it for the food. Overall, I would definitely recommend giving this place a try if you're a ramen fan!
+                                </span>
+
+                                {
+
+                                    <Rating className='mt-2'>
+                                        <Rating.Star />
+                                        <Rating.Star />
+                                        <Rating.Star />
+                                        <Rating.Star />
+                                        <Rating.Star filled={false} />
+                                        <p className="ml-2 text-sm font-medium text-gray-500 dark:text-gray-400">
+                                            4.95 out of 5
+                                        </p>
+                                    </Rating>
+                                }
+
+
+                            </div>
+                        </Card>
+                    </div>
+                </div>
+
             </div>
 
         </div>

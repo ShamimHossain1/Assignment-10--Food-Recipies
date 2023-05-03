@@ -9,11 +9,11 @@ const Foooter = () => {
                 <div className="w-full px-10">
                     <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
                         <div>
-                        <span className="self-center whitespace-nowrap text-4xl  font-bold dark:text-white">
+                        <span className="self-center whitespace-nowrap lg:text-4xl text-xl  font-bold dark:text-white">
                     Shaolin Recipes
                     </span>
                         </div>
-                        <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
+                        <div className="grid mt-5 grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
                             <div>
                                 <Footer.Title title="about" />
                                 <Footer.LinkGroup col={true}>
