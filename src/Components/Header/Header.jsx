@@ -1,36 +1,45 @@
-import { Avatar, Dropdown, Navbar } from 'flowbite-react';
-import React from 'react';
+import { Avatar, Button, Dropdown, Navbar } from 'flowbite-react';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { AuthContext } from '../AuthProviders/AuthProviders';
 
 const Header = () => {
+    const { user, logOut } = useContext(AuthContext);
+    // const {email,displayName, photoURL} = user;
+    // console.log(displayName)
+    console.log(user)
+
+    const handleLogout = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.error(error));
+    }
+
     return (
-        <div className='px-52 py-5 '>
+        <div className='lg:px-52 py-5 '>
             <Navbar
-            
+
                 fluid={true}
                 rounded={true}
             >
                 <Navbar.Brand href="https://flowbite.com/">
-                    <img
-                        src="https://flowbite.com/docs/images/logo.svg"
-                        className="mr-3 h-6 sm:h-9"
-                        alt="Flowbite Logo"
-                    />
-                    <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-                        Flowbite
+                    
+                    <span className="self-center whitespace-nowrap text-4xl  font-bold text-gray-700">
+                    Shaolin Recipes
                     </span>
                 </Navbar.Brand>
-                <div className="flex md:order-2">
-                    <Dropdown
+                <div className="flex items-center gap-5 md:order-2">
+                    {user && <Dropdown
                         arrowIcon={false}
                         inline={true}
-                        label={<Avatar alt="User settings" img="https://flowbite.com/docs/images/people/profile-picture-5.jpg" rounded={true} />}
+                        label={<Avatar alt="User settings" img={user.photoURL ? user?.photoURL : 'https://e7.pngegg.com/pngimages/798/436/png-clipart-computer-icons-user-profile-avatar-profile-heroes-black-thumbnail.png'} rounded={true} />}
                     >
                         <Dropdown.Header>
-                            <span className="block text-sm">
-                                Bonnie Green
+                            <span className="block font-semibold text-sm">
+                             {user.displayName}
                             </span>
                             <span className="block truncate text-sm font-medium">
-                                name@flowbite.com
+                                {user.email}
                             </span>
                         </Dropdown.Header>
                         <Dropdown.Item>
@@ -44,9 +53,11 @@ const Header = () => {
                         </Dropdown.Item>
                         <Dropdown.Divider />
                         <Dropdown.Item>
-                            Sign out
+                        <Link to='/login'><Button onClick={handleLogout}>Sign Out</Button></Link>
                         </Dropdown.Item>
-                    </Dropdown>
+                    </Dropdown>}
+
+                    {!user &&  <Link to='/login'><Button>Login</Button></Link>}
                     <Navbar.Toggle />
                 </div>
                 <Navbar.Collapse>

@@ -10,6 +10,10 @@ import Error from './Components/404 Page/Error';
 import Home from './Components/Home/Home';
 import Main from './Components/LayOut/Main';
 import ChefDetails from './Components/ChefSection/ChefDetails/ChefDetails';
+import AuthProviders from './Components/AuthProviders/AuthProviders';
+import Login from './Components/Login/Login';
+import SignUp from './Components/SignUp/SignUp';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 
 const router = createBrowserRouter([
@@ -23,8 +27,20 @@ const router = createBrowserRouter([
         loader : ()=>fetch('http://localhost:5000')
       },
       {
-        path: "/ChefDetails",
-        element:<ChefDetails></ChefDetails> ,
+        path: "/ChefDetails/:id",
+        element:<PrivateRoute><ChefDetails></ChefDetails></PrivateRoute> ,
+        loader: ({ params }) => fetch(`http://localhost:5000/details/${params.id}`)
+
+        
+      },
+      {
+        path: "/Login",
+        element: <Login></Login>,
+        
+      },
+      {
+        path: "/SignUp",
+        element: <SignUp/>,
         
       },
 
@@ -39,6 +55,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+   <AuthProviders>
    <RouterProvider router={router} />
+   </AuthProviders>
   </React.StrictMode>,
 )

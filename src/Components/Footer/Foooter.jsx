@@ -9,22 +9,19 @@ const Foooter = () => {
                 <div className="w-full px-10">
                     <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1">
                         <div>
-                            <Footer.Brand
-                                href="https://flowbite.com"
-                                src="https://flowbite.com/docs/images/logo.svg"
-                                alt="Flowbite Logo"
-                                name="Flowbite"
-                            />
+                        <span className="self-center whitespace-nowrap text-4xl  font-bold dark:text-white">
+                    Shaolin Recipes
+                    </span>
                         </div>
                         <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
                             <div>
                                 <Footer.Title title="about" />
                                 <Footer.LinkGroup col={true}>
                                     <Footer.Link href="#">
-                                        Flowbite
+                                        Recipes
                                     </Footer.Link>
                                     <Footer.Link href="#">
-                                        Tailwind CSS
+                                        Chefs
                                     </Footer.Link>
                                 </Footer.LinkGroup>
                             </div>
@@ -56,7 +53,7 @@ const Foooter = () => {
                     <div className="w-full sm:flex sm:items-center sm:justify-between">
                         <Footer.Copyright
                             href="#"
-                            by="Flowbite™"
+                            by="Shaolin Recipes"
                             year={2022}
                         />
                         <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
