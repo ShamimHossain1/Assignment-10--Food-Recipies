@@ -9,6 +9,7 @@ import {
 import Error from './Components/404 Page/Error';
 import Home from './Components/Home/Home';
 import Main from './Components/LayOut/Main';
+import ChefDetails from './Components/ChefSection/ChefDetails/ChefDetails';
 
 
 const router = createBrowserRouter([
@@ -19,7 +20,14 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-      }
+        loader : ()=>fetch('http://localhost:5000')
+      },
+      {
+        path: "/ChefDetails",
+        element:<ChefDetails></ChefDetails> ,
+        
+      },
+
     ]
   },
   {
