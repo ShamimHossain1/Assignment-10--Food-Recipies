@@ -64,23 +64,18 @@ const Header = () => {
                 </div>
                 <Navbar.Collapse>
                     <Navbar.Link
-                        href="/"
-                        active={true}
+                        
+                        
                     >
-                        Home
+                        <Link to='/'>Home</Link>
                     </Navbar.Link>
-                    <Navbar.Link href="/navbars">
-                        About
+                    <Navbar.Link >
+                        <Link to='/blogs'>Blogs</Link>
                     </Navbar.Link>
-                    <Navbar.Link href="/navbars">
-                        Services
+                    <Navbar.Link >
+                    <Link to='/about'>About</Link>
                     </Navbar.Link>
-                    <Navbar.Link href="/navbars">
-                        Pricing
-                    </Navbar.Link>
-                    <Navbar.Link href="/navbars">
-                        Contact
-                    </Navbar.Link>
+                    
                 </Navbar.Collapse>
             </Navbar>
         </div>
