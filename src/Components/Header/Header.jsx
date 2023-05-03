@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../AuthProviders/AuthProviders';
 
+
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
     // const {email,displayName, photoURL} = user;
@@ -14,18 +15,19 @@ const Header = () => {
             .then(() => { })
             .catch(error => console.error(error));
     }
+    
 
     return (
-        <div className='lg:px-52 py-5 '>
+        <div  className='lg:px-52 lg:py-5 '>
             <Navbar
-
+                
                 fluid={true}
                 rounded={true}
             >
-                <Navbar.Brand href="https://flowbite.com/">
-                    
-                    <span className="self-center whitespace-nowrap text-4xl  font-bold text-gray-700">
-                    Shaolin Recipes
+                <Navbar.Brand href="#">
+
+                    <span className="self-center whitespace-nowrap lg:text-4xl  font-bold text-gray-700">
+                        Shaolin Recipes
                     </span>
                 </Navbar.Brand>
                 <div className="flex items-center gap-5 md:order-2">
@@ -36,7 +38,7 @@ const Header = () => {
                     >
                         <Dropdown.Header>
                             <span className="block font-semibold text-sm">
-                             {user.displayName}
+                                {user.displayName}
                             </span>
                             <span className="block truncate text-sm font-medium">
                                 {user.email}
@@ -53,11 +55,11 @@ const Header = () => {
                         </Dropdown.Item>
                         <Dropdown.Divider />
                         <Dropdown.Item>
-                        <Link to='/login'><Button onClick={handleLogout}>Sign Out</Button></Link>
+                            <Link to='/login'><Button onClick={handleLogout}>Sign Out</Button></Link>
                         </Dropdown.Item>
                     </Dropdown>}
 
-                    {!user &&  <Link to='/login'><Button>Login</Button></Link>}
+                    {!user && <Link to='/login'><Button>Login</Button></Link>}
                     <Navbar.Toggle />
                 </div>
                 <Navbar.Collapse>
