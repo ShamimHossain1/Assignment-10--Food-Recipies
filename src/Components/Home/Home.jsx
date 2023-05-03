@@ -1,8 +1,8 @@
 import React from 'react';
 
 import Chefs from '../ChefSection/Chefs';
-import { Carousel } from 'flowbite-react';
-import { useLoaderData } from 'react-router-dom';
+import { Button, Carousel } from 'flowbite-react';
+import { Link, useLoaderData } from 'react-router-dom';
 
 const Home = () => {
     const Chef = useLoaderData();
@@ -11,19 +11,16 @@ const Home = () => {
             <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
                 <Carousel>
                     
-                    <div  ></div>
-                    <img
-                        src="https://t4.ftcdn.net/jpg/03/01/76/65/360_F_301766534_Nd0WoLqus2TVilLcRQL6OMACiJeEgnWu.jpg"
-                        alt="..."
-                    />
-                    <img
-                        src="https://c4.wallpaperflare.com/wallpaper/977/846/535/food-rice-chinese-food-soup-wallpaper-preview.jpg"
-                        alt="..."
-                    />
-                    <img
-                        src="https://t4.ftcdn.net/jpg/03/24/16/57/360_F_324165757_buAX78dg7TGgjh0pB8aUCwOWRkNejmwA.jpg"
-                        alt="..."
-                    />
+                <div className='h-full' style={{ backgroundImage:  "url('https://t4.ftcdn.net/jpg/03/01/76/65/360_F_301766534_Nd0WoLqus2TVilLcRQL6OMACiJeEgnWu.jpg')" }}>
+                   <Link className='flex justify-center mt-56' to='/login'><Button> Get Started</Button></Link>
+                </div>
+                <div className='h-full' style={{  backgroundImage:  "url('https://c4.wallpaperflare.com/wallpaper/977/846/535/food-rice-chinese-food-soup-wallpaper-preview.jpg')" }}>
+                   <Link className='flex justify-center mt-56'  to='/login'><Button> Get Started</Button></Link>
+                </div>
+                <div className='h-full' style={{ backgroundImage:  "url('https://t4.ftcdn.net/jpg/03/24/16/57/360_F_324165757_buAX78dg7TGgjh0pB8aUCwOWRkNejmwA.jpg')" }}>
+                   <Link className='flex justify-center mt-56' to='/login'><Button> Get Started</Button></Link>
+                </div>
+                    
                    
                 </Carousel>
             </div>
