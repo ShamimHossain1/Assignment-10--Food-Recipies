@@ -19,11 +19,7 @@ const Login = () => {
     const emailRef = useRef();
     // console.log(emailRef)
 
-    if(loading){
-        return (  <div className="text-center mt-24">
-        <Spinner size="xl" aria-label="Center-aligned spinner example" />
-      </div>)
-    }
+   
 
     const handleLogin = event => {
 
@@ -36,7 +32,8 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 const loggedUser = result.user
-                // setUser(loggedUser);                          
+                // setUser(loggedUser);  
+                                     
                 form.reset();
                 navigate(from, { replace: true });
             })
@@ -73,7 +70,7 @@ const Login = () => {
         signInWithGoogle()
         .then(result=>{
           const loggedUser = result.user
-          console.log(loggedUser)
+        //   console.log(loggedUser)
           navigate(from, { replace: true });
         })
         .catch(error=>{
@@ -109,7 +106,7 @@ const Login = () => {
                             name='email'
                             id="email1"
                             type="email"
-                            placeholder="name@flowbite.com"
+                            placeholder="name@mail.com"
                             required={true}
                         />
                     </div>
@@ -124,6 +121,7 @@ const Login = () => {
 
                             name='password'
                             id="password1"
+                            placeholder="password"
                             type={show ? 'text' : 'password'}
                             required={true}
                         />

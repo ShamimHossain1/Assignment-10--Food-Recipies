@@ -1,6 +1,6 @@
 import { Avatar, Button, Dropdown, Navbar } from 'flowbite-react';
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { AuthContext } from '../AuthProviders/AuthProviders';
 
 
@@ -8,7 +8,9 @@ const Header = () => {
     const { user, logOut } = useContext(AuthContext);
     // const {email,displayName, photoURL} = user;
     // console.log(displayName)
-    console.log(user)
+    // console.log(user)
+    const location = useLocation().pathname
+    // console.log(location)
 
     const handleLogout = () => {
         logOut()
@@ -34,7 +36,9 @@ const Header = () => {
                     {user && <Dropdown
                         arrowIcon={false}
                         inline={true}
-                        label={<Avatar alt="User settings" img={user.photoURL ? user?.photoURL : 'https://e7.pngegg.com/pngimages/798/436/png-clipart-computer-icons-user-profile-avatar-profile-heroes-black-thumbnail.png'} rounded={true} />}
+                        label={
+                        <Avatar alt="User settings" img={user.photoURL ? user?.photoURL : 'https://e7.pngegg.com/pngimages/798/436/png-clipart-computer-icons-user-profile-avatar-profile-heroes-black-thumbnail.png'} rounded={true} />
+                    }
                     >
                         <Dropdown.Header>
                             <span className="block font-semibold text-sm">
@@ -44,15 +48,7 @@ const Header = () => {
                                 {user.email}
                             </span>
                         </Dropdown.Header>
-                        <Dropdown.Item>
-                            Dashboard
-                        </Dropdown.Item>
-                        <Dropdown.Item>
-                            Settings
-                        </Dropdown.Item>
-                        <Dropdown.Item>
-                            Earnings
-                        </Dropdown.Item>
+                        
                         <Dropdown.Divider />
                         <Dropdown.Item>
                             <Link to='/login'><Button onClick={handleLogout}>Sign Out</Button></Link>
@@ -62,18 +58,22 @@ const Header = () => {
                     {!user && <Link to='/login'><Button>Login</Button></Link>}
                     <Navbar.Toggle />
                 </div>
-                <Navbar.Collapse>
+                <Navbar.Collapse >
                     <Navbar.Link
-                        
+                        active={ location === '/' ? true : false}
                         
                     >
-                        <Link to='/'>Home</Link>
+                        <Link className='text-lg' to='/'>Home</Link>
                     </Navbar.Link>
-                    <Navbar.Link >
-                        <Link to='/blogs'>Blogs</Link>
+                    <Navbar.Link 
+                    active={ location === '/blogs' ? true : false}
+                    >
+                        <Link  className='text-lg' to='/blogs'>Blogs</Link>
                     </Navbar.Link>
-                    <Navbar.Link >
-                    <Link to='/about'>About</Link>
+                    <Navbar.Link
+                    active={ location === '/about' ? true : false}
+                    >
+                    <Link className='text-lg' to='/about'>About</Link>
                     </Navbar.Link>
                     
                 </Navbar.Collapse>

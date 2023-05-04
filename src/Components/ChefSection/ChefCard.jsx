@@ -2,6 +2,7 @@ import { Button, Card } from 'flowbite-react';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaThumbsUp } from 'react-icons/fa';
+import LazyLoad from 'react-lazy-load';
 
 const ChefCard = ({ chef }) => {
     // console.log(chef)
@@ -10,11 +11,13 @@ const ChefCard = ({ chef }) => {
     return (
         <div>
             <div className="max-w-sm ">
-                <Card
+            <LazyLoad>
+            <Card
                     className=''
                     imgAlt="Meaningful alt text for an image that is not purely decorative"
                     imgSrc={picture}
                 >
+                   
                     <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                         {name}
                     </h5>
@@ -28,6 +31,7 @@ const ChefCard = ({ chef }) => {
                        Total {num_recipes} recipes <span><Link to={`/ChefDetails/${id}`}><Button>View Recipes</Button></Link></span>
                     </p>
                 </Card>
+                </LazyLoad>
             </div>
         </div>
     );

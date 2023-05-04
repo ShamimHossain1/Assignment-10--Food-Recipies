@@ -3,6 +3,7 @@ import React from 'react';
 import Chefs from '../ChefSection/Chefs';
 import { Button, Card, Carousel, Rating } from 'flowbite-react';
 import { Link, useLoaderData } from 'react-router-dom';
+import LazyLoad from 'react-lazy-load';
 
 const Home = () => {
     const Chef = useLoaderData();
@@ -10,15 +11,16 @@ const Home = () => {
         <div>
             <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
                 <Carousel>
-
-                    <div className='h-full  ' style={{ backgroundImage: "url('https://t4.ftcdn.net/jpg/03/01/76/65/360_F_301766534_Nd0WoLqus2TVilLcRQL6OMACiJeEgnWu.jpg')" }}>
+                
+                    <div className='h-full  ' style={{ backgroundImage: "url('https://t4.ftcdn.net/jpg/03/01/76/65/360_F_301766534_Nd0WoLqus2TVilLcRQL6OMACiJeEgnWu.jpg')" }}> 
 
                     </div>
+                   
                     <div className='h-full' style={{ backgroundImage: "url('https://c4.wallpaperflare.com/wallpaper/977/846/535/food-rice-chinese-food-soup-wallpaper-preview.jpg')" }}></div>
-
+                    
                     <div className='h-full' style={{ backgroundImage: "url('https://t4.ftcdn.net/jpg/03/24/16/57/360_F_324165757_buAX78dg7TGgjh0pB8aUCwOWRkNejmwA.jpg')" }}>
 
-                    </div>
+                    </div> 
 
                 </Carousel>
             </div>

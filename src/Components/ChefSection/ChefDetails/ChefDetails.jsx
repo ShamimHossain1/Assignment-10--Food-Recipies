@@ -1,20 +1,27 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData, useLocation } from 'react-router-dom';
-import { FaThumbsUp } from 'react-icons/fa';
+import { FaHeart, FaThumbsUp } from 'react-icons/fa';
 import { Rating } from 'flowbite-react';
 import { key } from 'localforage';
+import { ToastContainer, toast } from 'react-toastify';
 
 
 
 const ChefDetails = () => {
     const chefDetails = useLoaderData();
+    const [marked , setMarked] = useState()
     const { name, likes, num_recipes, picture, years_experience, bio, recipe } = chefDetails;
     // console.log(recipe)
-
+    const handleFavorite =()=>{
+        toast('This food is your favorite');
+    
+       
+    }
 
     return (
         <div>
+            <ToastContainer></ToastContainer>
             <div className='grid grid-cols-2 gap-24 mt-16 px-80 '>
 
 
@@ -72,6 +79,9 @@ const ChefDetails = () => {
                                     </p>
                                 </Rating>
                                 }
+                                
+
+                               <button className=""   onClick={handleFavorite} > <FaHeart className='text-2xl mt-2 '></FaHeart></button>
 
                             </div>
 
