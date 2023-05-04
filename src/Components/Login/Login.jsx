@@ -2,7 +2,7 @@ import { Button, Card, Checkbox, Label, Spinner, TextInput } from 'flowbite-reac
 import React, { useContext, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../AuthProviders/AuthProviders';
-import { FaGithub, FaGoogle } from 'react-icons/fa';
+import { FaCross, FaEye, FaEyeSlash, FaGithub, FaGoogle } from 'react-icons/fa';
 
 
 const Login = () => {
@@ -16,7 +16,7 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
-    console.log(from)
+    // console.log(from)
     const emailRef = useRef();
     // console.log(emailRef)
 
@@ -126,9 +126,9 @@ const Login = () => {
                             type={show ? 'text' : 'password'}
                             required={true}
                         />
-                            <button className=' p-1 relative left-72 -top-10 border rounded-lg' onClick={(event) => {event.preventDefault(); setShow(!show)}}><small>
+                            <button className=' text-2xl relative left-72 ml-4 -top-8' onClick={(event) => {event.preventDefault(); setShow(!show)}}><small>
                                 {
-                                    show ? <span>Show</span> : <span>Hide</span>
+                                    show ? <FaEyeSlash></FaEyeSlash>:<FaEye></FaEye>  
                                 }</small></button>
 
                         </div>

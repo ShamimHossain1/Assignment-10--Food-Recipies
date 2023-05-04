@@ -9,6 +9,7 @@ import { updateProfile } from 'firebase/auth';
 
 const SignUp = () => {
     const [error, setError] = useState('')
+    const [errorEmail, setErrorEmail] = useState('')
     const { createUser } = useContext(AuthContext);
 
     const handleSignUp = event => {
@@ -38,6 +39,9 @@ const SignUp = () => {
             })
             .catch(error => {
                 console.log(error.message)
+                if(error.message === "Firebase: Error (auth/email-already-in-use)."){
+                    setErrorEmail('Email already in use')
+                }
 
             })
         setError('')
@@ -94,7 +98,7 @@ const SignUp = () => {
                             placeholder="name@mail.com"
                             required={true}
                             shadow={true}
-                        />
+                        /><p className='text-red-600 text-sm'>{errorEmail}</p>
 
                     </div>
                     <div>

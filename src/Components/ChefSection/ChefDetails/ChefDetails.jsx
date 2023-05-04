@@ -10,11 +10,12 @@ import { ToastContainer, toast } from 'react-toastify';
 
 const ChefDetails = () => {
     const chefDetails = useLoaderData();
-    const [marked , setMarked] = useState()
+    const [marked , setMarked] = useState(false)
     const { name, likes, num_recipes, picture, years_experience, bio, recipe } = chefDetails;
     // console.log(recipe)
     const handleFavorite =()=>{
         toast('This food is your favorite');
+        setMarked(true)
     
        
     }
@@ -81,7 +82,7 @@ const ChefDetails = () => {
                                 }
                                 
 
-                               <button className=""   onClick={handleFavorite} > <FaHeart className='text-2xl mt-2 '></FaHeart></button>
+                               <button  disabled={marked}   onClick={handleFavorite} > <FaHeart className='text-2xl mt-2 '></FaHeart></button>
 
                             </div>
 

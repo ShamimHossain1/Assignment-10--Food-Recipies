@@ -26,7 +26,7 @@ const Header = () => {
                 fluid={true}
                 rounded={true}
             >
-                <Navbar.Brand href="#">
+                <Navbar.Brand href="/">
 
                     <span className="self-center whitespace-nowrap lg:text-4xl  font-bold text-gray-700">
                         Shaolin Recipes
