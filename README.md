@@ -1,4 +1,8 @@
-Live Link : https://assignment-10-28282.web.app/
+Firebase Live Link : https://assignment-10-28282.web.app/
+Client Repo : https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-client-side-ShamimHossain1
+Api : https://assignment-10-server-shamimhossain1.vercel.app
+Server Repo: https://github.com/programming-hero-web-course-4/b7a10-chef-recipe-hunter-server-side-ShamimHossain1
+
 
 This is a food recipes website where one can find only chinese chefs and their special recipes.
 
