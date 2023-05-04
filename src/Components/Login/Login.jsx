@@ -16,6 +16,7 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
+    console.log(from)
     const emailRef = useRef();
     // console.log(emailRef)
 
@@ -81,7 +82,7 @@ const Login = () => {
         signInWithGitHub()
         .then(result=>{
           const loggedUser = result.user
-          console.log(loggedUser)
+        //   console.log(loggedUser)
           navigate(from, { replace: true });
         })
         .catch(error=>{

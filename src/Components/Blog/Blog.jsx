@@ -39,17 +39,20 @@ const Blog = () => {
             <Button className='mx-auto' onClick={onButtonClick}> Download as PDF</Button>
             <div className='document'>
             <div className='question '>
-                <h3 >1. When should you use context API? </h3>
-                <p >Ans: Context API allows you to share data between components without having to pass the data through every level of the component tree manually. If i have to applied a function across multiple components then i can use Context API to manage the function data and update it as necessary.</p>
+                <h3 >1. Tell us the differences between uncontrolled and controlled components. </h3>
+                <p >Ans: In an uncontrolled component, the DOM handles the form data by itself in the component. Whereas in a controlled <br /> component, the state is used to handle the form data within the component.</p>
             </div>
             <div className='question'>
-                <h3 >2. What is custom Hook? </h3>
-                <p>Ans: Custom hook is a function that uses one or more of the existing React hooks to provide additional functionality that can be reused across multiple components. Custom hook is a way to share logic between components.</p>
+                <h3 >2. How to validate React props using PropTypes? </h3>
+                <p>Ans: To validate React props using PropTypes, you need to import the PropTypes module from the 'prop-types' <br /> package and define the expected data types and other constraints for each prop using the propTypes property of the component.</p>
             </div>
             <div className='question'>
-                <h3 >3. what is useRef & useMemo? </h3>
-                <p >Ans: useRef is a hook that returns a mutable ref object whose current property is initialized to the provided argument or undefined  <br />
-                    useMemo is a hook that memoizes the result of a function, caching its return value and returning it only when its dependencies have changed. </p>
+                <h3 >3. Tell us the difference between nodejs and express js. </h3>
+                <p >Ans: NodeJS is an event-driven, non-blocking I/O model using JavaScript as its main language. It helps to build scalable network applications. <br /> Express is a minimal and flexible Node. js web application framework that provides a robust set of features for web and mobile applications. </p>
+            </div>
+            <div className='question'>
+                <h3 >4. What is a custom hook, and why will you create a custom hook? </h3>
+                <p >Ans: Custom React JS hooks are reusable functions that a React JS software developer can <br /> use to add special and unique functionality to the React applications. </p>
             </div>
             </div>
 
