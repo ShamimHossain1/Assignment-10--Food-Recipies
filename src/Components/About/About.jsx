@@ -2,10 +2,10 @@ import React from 'react';
 
 const About = () => {
     return (
-        <div className='lg:px-72'>
+        <div className='lg:px-72 px-10'>
             <h2 className='text-center lg:text-4xl    font-bold py-3 mb-10 mt-5 bg-blue-500 text-slate-100 rounded-xl'>About Us</h2>
 
-            <h2 className='text-lg font-semibold text-gray-600'>
+            <h2 className='lg:text-lg font-semibold text-gray-600'>
                 Welcome to our website, where we specialize in Chinese cuisine and recipes! Our passion for Chinese food has led us on a journey to explore the depths of this rich and diverse cuisine, and we are excited to share our findings with you. <br />
 
                 Our website features a wide variety of Chinese recipes, from traditional dishes like Kung Pao Chicken and Fried Rice, to lesser-known regional specialties like Sichuan Hot Pot and Xinjiang Lamb Skewers. We strive to provide detailed instructions and tips for each recipe, so that even novice cooks can achieve authentic Chinese flavors at home. <br />

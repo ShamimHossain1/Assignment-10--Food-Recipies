@@ -63,7 +63,7 @@ const SignUp = () => {
 
     }
     return (
-        <div className='w-1/4 mx-auto mt-14'>
+        <div className='lg:w-1/4 mx-auto mt-14'>
             <ToastContainer />
 
             <h2 className='text-5xl font-bold text-center mb-10'>Please Sign Up</h2>
